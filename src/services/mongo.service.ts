@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { writeFileSync, existsSync, readFileSync } from 'fs';
 import mongoose from 'mongoose';
 import { join } from 'path';
-// mongodb://root:root@localhost:27017
 @Injectable()
 export class MongoService {
   private path: string;

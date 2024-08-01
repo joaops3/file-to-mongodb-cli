@@ -15,12 +15,12 @@ interface ICommandOptions {
   collection: string | null;
   input: string | null;
   output: string | null;
-  db: any;
+  db?: any;
 }
 
 @Command({
-  name: 'conv',
-  description: 'convert files to json and insert into mongoDB',
+  name: 'parse',
+  description: 'Parse large files insert into mongoDB',
   options: { isDefault: true },
 })
 export class BasicCommand extends CommandRunner {
@@ -34,7 +34,7 @@ export class BasicCommand extends CommandRunner {
   }
 
   async run(passedParams: string[], options?: ICommandOptions): Promise<void> {
-    if (options?.db) {
+    if ('db' in options) {
       const uri = await this.mongoService.getUrl();
       console.log(uri ? `URI: ${uri}` : 'URI not configured');
       return;
@@ -140,7 +140,6 @@ export class BasicCommand extends CommandRunner {
   @Option({
     flags: '-d, --db [db]',
     description: 'Show DB URI',
-    defaultValue: true,
   })
   getDbConnection(val: string): string {
     return val;
