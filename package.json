@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Node.js command-line interface (CLI) tool designed to easily import data within chunks from large files, such as Excel, CSV, or JSON, into a MongoDB collection",
   "author": "joaops3",
-  "private": true,
+  "private": false,
   "license": "UNLICENSED",
   "bin": {
     "ftmon": "dist/main.js"
