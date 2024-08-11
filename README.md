@@ -12,13 +12,13 @@ $ npm i -g file-to-mongodb-cli
 
 ```bash
 # Only sending file
-$ ftmon -i ./file/file.csv
+$ ftmon -i ./files/file.csv
 
-# File and db uri
-$ ftmon -i ./file/file.csv -u <mongoDbURI>
+# Passing File and Uri
+$ ftmon -i ./files/file.csv -u <mongoDbURI>
 
-# File, uri and collection
-$ ftmon -i ./file/file.csv -c <collection-name> -u <mongoDbURI>
+# Passing File, Uri and Collection
+$ ftmon -i ./files/file.csv -c <collection-name> -u <mongodb-URI>
 
 # Show current db connection
 $ ftmon --db
