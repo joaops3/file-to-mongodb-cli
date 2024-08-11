@@ -5,7 +5,7 @@ file-to-mongodb-cli is a Node.js command-line interface (CLI) tool designed to e
 ## Installation
 
 ```bash
-$ npm i -g file-to-mongodb-js
+$ npm i -g file-to-mongodb-cli
 ```
 
 ## Running the app
