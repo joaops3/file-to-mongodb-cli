@@ -2,3 +2,8 @@ src/
 mocks/
 node_modules/
 yarn.lock
+tsconfig.json
+tsconfig.build.json
+.prettierrrc
+nest-cli.json
+.eslintrc.js

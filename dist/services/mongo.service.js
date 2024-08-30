@@ -16,7 +16,7 @@ const mongoose_1 = require("mongoose");
 const path_1 = require("path");
 let MongoService = class MongoService {
     constructor() {
-        this.path = (0, path_1.join)(__dirname, 'credentials.txt');
+        this.path = (0, path_1.join)(__dirname, '..', '..', 'credentials.txt');
     }
     async initMongo(url) {
         let connectUrl;

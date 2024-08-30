@@ -13,14 +13,12 @@ exports.BasicCommand = void 0;
 const nest_commander_1 = require("nest-commander");
 const mongo_service_1 = require("./services/mongo.service");
 const file_to_mongo_service_1 = require("./services/file-to-mongo.service");
-const file_to_json_service_1 = require("./services/file-to-json.service");
 const utils_1 = require("./utils");
 const cli_spinner_1 = require("cli-spinner");
 let BasicCommand = class BasicCommand extends nest_commander_1.CommandRunner {
-    constructor(fileToMongoService, fileToJsonService, mongoService, questionService) {
+    constructor(fileToMongoService, mongoService, questionService) {
         super();
         this.fileToMongoService = fileToMongoService;
-        this.fileToJsonService = fileToJsonService;
         this.mongoService = mongoService;
         this.questionService = questionService;
     }
@@ -147,11 +145,10 @@ __decorate([
 exports.BasicCommand = BasicCommand = __decorate([
     (0, nest_commander_1.Command)({
         name: 'parse',
-        description: 'Parse large files insert into mongoDB',
+        description: 'Parse large files and insert into mongoDB',
         options: { isDefault: true },
     }),
     __metadata("design:paramtypes", [file_to_mongo_service_1.FileToMongoService,
-        file_to_json_service_1.FileToJsonService,
         mongo_service_1.MongoService,
         nest_commander_1.InquirerService])
 ], BasicCommand);

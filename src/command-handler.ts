@@ -7,7 +7,6 @@ import {
 
 import { MongoService } from './services/mongo.service';
 import { FileToMongoService } from './services/file-to-mongo.service';
-import { FileToJsonService } from './services/file-to-json.service';
 import { validFileType, verifyUri } from './utils';
 import { Spinner } from 'cli-spinner';
 interface ICommandOptions {
@@ -20,13 +19,12 @@ interface ICommandOptions {
 
 @Command({
   name: 'parse',
-  description: 'Parse large files insert into mongoDB',
+  description: 'Parse large files and insert into mongoDB',
   options: { isDefault: true },
 })
 export class BasicCommand extends CommandRunner {
   constructor(
     private readonly fileToMongoService: FileToMongoService,
-    private readonly fileToJsonService: FileToJsonService,
     private readonly mongoService: MongoService,
     private readonly questionService: InquirerService,
   ) {

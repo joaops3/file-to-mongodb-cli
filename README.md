@@ -15,7 +15,7 @@ $ npm i -g file-to-mongodb-cli
 $ ftmon -i ./files/file.csv
 
 # Passing File and Uri
-$ ftmon -i ./files/file.csv -u <mongoDbURI>
+$ ftmon -i ./files/file.csv -u <mongodb-URI>
 
 # Passing File, Uri and Collection
 $ ftmon -i ./files/file.csv -c <collection-name> -u <mongodb-URI>

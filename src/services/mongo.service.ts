@@ -7,7 +7,7 @@ export class MongoService {
   private path: string;
 
   constructor() {
-    this.path = join(__dirname, 'credentials.txt');
+    this.path = join(__dirname, '..', '..', 'credentials.txt');
   }
 
   async initMongo(url?: string): Promise<typeof mongoose> {
@@ -21,6 +21,7 @@ export class MongoService {
     } catch (e) {
       return;
     }
+
     try {
       const conn = await mongoose.connect(connectUrl);
       return conn;
